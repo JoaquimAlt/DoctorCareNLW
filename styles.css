@@ -12,8 +12,13 @@
     --paragraph: #495057;
     --backcard: #FFFAF1;
     --contour: #DCE9E2;
+    --bg-ligth: #F7F9F9;
 
     --nav-height: 7.2rem;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 html,
@@ -26,11 +31,46 @@ ul {
     list-style: none;
 }
 
+section{
+    padding-block: 10rem;
+}
+
+section header h1{
+    font-size: 3.4rem;
+    color: var(--headline);
+    line-height: 130%;
+    margin-bottom: 2.4rem;
+}
+
+section header h2{
+    font-size: 3rem;
+    line-height: 3.9rem;
+    color: var(--headline);
+}
+
+section header h4{
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.6rem;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+section .content p{
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: var(--paragraph);
+}
+
 body {
     font-family: 'DM Sans', sans-serif;
     font-size: 1.6rem;
     text-align: center;
     overflow: overlay;
+    background-color: var(--bg-ligth);
 }
 
 .wrapper {
@@ -39,9 +79,9 @@ body {
     padding-inline: 2.4rem;
 }
 
-/*~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~HOME~~~~~~~~~~~~~~~~*/
 
-header::before {
+#home::before {
     content: '';
     width: 100%;
     height: calc(108rem + var(--nav-height));
@@ -53,24 +93,11 @@ header::before {
     z-index: -1;
 }
 
-header {
-    margin-top: calc(4.1rem + var(--nav-height));
+#home {
+     padding-top: calc(4.1rem + var(--nav-height));
 }
 
-header h4 {
-    font-size: 1.4rem;
-    color: var(--primary-color);
-    margin-bottom: 1.6rem;
-}
-
-header h1 {
-    font-size: 3.4rem;
-    color: var(--headline);
-    line-height: 130%;
-    margin-bottom: 2.4rem;
-}
-
-header p {
+#home p {
     font-size: 1.8rem;
     line-height: 150%;
     font-weight: 400;
@@ -78,7 +105,7 @@ header p {
     margin-bottom: 3.2rem;
 }
 
-header button {
+#home button {
     background-color: var(--primary-color);
     height: 6.2rem;
     width: 26.3rem;
@@ -97,13 +124,13 @@ header button {
     margin-left: auto;
 }
 
-header img {
+#home img {
     display: block;
     margin-inline: auto;
     object-position: 0 2rem;
 }
 
-.caixa_grande {
+#home .caixa_grande {
     width: 32.7rem;
     background-color: var(--backcard);
     padding-block: 4rem;
@@ -116,14 +143,14 @@ header img {
     border-radius: 6px;
 }
 
-.item h3 {
+#home .item h3 {
     font-size: 4.8rem;
     line-height: 130%;
     color: var(--headline);
     margin-bottom: 0.4rem;
 }
 
-.item p {
+#home .item p {
     color: var(--primary-color);
     line-height: 150%;
     margin: 0;
@@ -134,9 +161,8 @@ nav {
     display: flex;
     height: var(--nav-height);
     position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    z-index: 100;
+    width: 100vw;
 }
 
 nav .wrapper {
@@ -147,7 +173,6 @@ nav .wrapper {
 
 nav.scroll {
     background-color: var(--primary-color);
-    width: 100vw;
 }
 
 nav.scroll svg:nth-child(1) path {
@@ -172,13 +197,17 @@ body.menu-expanded .open-menu{
 }
 
 body.menu-expanded > :not(nav){
-    display: none;
+    visibility: hidden;
 }
 
 body.menu-expanded .menu,
 body.menu-expanded .close-menu {
     opacity: 1;
     visibility: visible;
+}
+
+.menu{
+    transform: translateY(100%);
 }
 
 body.menu-expanded {
@@ -193,10 +222,9 @@ body.menu-expanded .menu {
     width: 100vw;
     height: 100vh;
     padding: var(--nav-height);
-}
 
-body.menu-expanded nav {
-    position: relative;
+    transition: transform 300ms;
+    transform: translateY(0);
 }
 
 .menu ul:nth-child(1) {
@@ -247,4 +275,52 @@ body.menu-expanded .logo path {
 
 body.menu-expanded button path {
     stroke: #fff;
+}
+
+/*~~~~~~~~~~~~~~SERVICES~~~~~~~~~~~~~~~~*/
+#services h2 {
+    margin-bottom: 6rem;
+}
+
+#services .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+
+#services header h4{
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 1.6rem;
+}
+
+.card {
+    padding: 2.4rem;
+    text-align: left;
+    background: #fff;
+    border-radius: 0.6rem;
+    border: 1px solid var(--contour);
+}
+
+.card h3{
+    margin-block: 1.6rem;
+}
+
+/*~~~~~~~~~~~~~~MENU EXPANDED~~~~~~~~~~~~~~~~*/
+#about {
+    text-align: left;
+    background-color: var(--backcard);
+}
+
+#about h2{
+    margin-bottom: 2.4rem;
+}
+
+#about p {
+    margin-top: 2.4rem;
+    margin-bottom: 6rem;
 }
