@@ -18,4 +18,19 @@ ScrollReveal({
     origin: 'top',
     distance: '30px',
     duration: 700,
-}).reveal('#home, #home img, #home .caixa_grande, #services, #services header, #services .card, #about, #about header, #about .content, #about img');
+}).reveal(`#home,
+         #home img,
+         #home .caixa_grande,
+         #home button,
+         #services,
+         #services header,
+         #services .card,
+         #about,
+         #about header,
+         #about .content,
+         #about img,
+         #contact,
+         #contact img
+         #contact header,
+         #contact ul,
+         #contact button`);

@@ -13,6 +13,7 @@
     --backcard: #FFFAF1;
     --contour: #DCE9E2;
     --bg-ligth: #F7F9F9;
+    --brand-dark: #00453A;
 
     --nav-height: 7.2rem;
 }
@@ -73,6 +74,29 @@ body {
     background-color: var(--bg-ligth);
 }
 
+.button {
+    background-color: var(--primary-color);
+    padding: 1.6rem 3.2rem;
+    width: fit-content;
+    border: none;
+    border-radius: 4rem;
+    margin-bottom: 6rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    transition: background 200ms;
+}
+
+.button:hover{
+    background-color: var(--brand-dark);
+}
+
 .wrapper {
     width: 37.5rem;
     margin-inline: auto;
@@ -105,29 +129,17 @@ body {
     margin-bottom: 3.2rem;
 }
 
-#home button {
-    background-color: var(--primary-color);
-    height: 6.2rem;
-    width: 26.3rem;
-    border: none;
-    border-radius: 4rem;
-    margin-bottom: 6rem;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.6rem;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 #home img {
     display: block;
     margin-inline: auto;
     object-position: 0 2rem;
+    width: 26.3rem;
+    height: 34.2rem;
+}
+
+#home .button {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #home .caixa_grande {
@@ -310,7 +322,7 @@ body.menu-expanded button path {
     margin-block: 1.6rem;
 }
 
-/*~~~~~~~~~~~~~~MENU EXPANDED~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~ABOUT~~~~~~~~~~~~~~~~*/
 #about {
     text-align: left;
     background-color: var(--backcard);
@@ -323,4 +335,65 @@ body.menu-expanded button path {
 #about p {
     margin-top: 2.4rem;
     margin-bottom: 6rem;
+}
+
+/*~~~~~~~~~~~~~~ABOUT~~~~~~~~~~~~~~~~*/
+#contact img{
+    width: 32.4rem;
+    height: 21.3rem;
+}
+
+#contact {
+    text-align: left;
+}
+
+#contact header{
+    margin-bottom: 3.2rem;
+}
+
+#contact ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+#contact ul li{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+#contact .button{
+    margin-top: 3.2rem;
+}
+
+/*~~~~~~~~~~~~~~FOOTER~~~~~~~~~~~~~~~~*/
+footer{
+    background-color: var(--primary-color);
+    padding-block: 6rem;
+    text-align: left;
+    color: var(--backcard);
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 2.4rem;
+}
+
+footer .logo svg {
+    width: 23.6rem;
+    height: 3.1rem;
+}
+
+footer .logo path {
+    fill: #fff;
+}
+
+footer p {
+    margin-bottom: 3.2rem;
+    line-height: 2;
+}
+
+footer .social-links{
+    justify-content: flex-start;
 }
