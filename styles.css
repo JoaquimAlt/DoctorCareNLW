@@ -7,13 +7,16 @@
 
 :root {
     font-size: 62.5%;
-    --primary-color: #00856F;
-    --headline: #212529;
-    --paragraph: #495057;
-    --backcard: #FFFAF1;
-    --contour: #DCE9E2;
-    --bg-ligth: #F7F9F9;
-    --brand-dark: #00453A;
+    --hue: 1800;
+    --primary-color: hsl(var(--hue), 100%, 26%);
+    --primary-color-ligth: hsl(var(--hue), 23%, 89%);
+    --primary-color-dark: hsl(var(--hue), 100%, 14%);
+
+    --headline: hsl(210, 11%, 15%);
+    --paragraph: hsl(210, 9%, 31%);
+    
+    --backcard: hsl(39, 100%, 97%);
+    --bg-ligth: hsl(180, 14%, 97%);
 
     --nav-height: 7.2rem;
 }
@@ -34,6 +37,10 @@ ul {
 
 section{
     padding-block: 10rem;
+}
+
+img{
+    max-width: 100%;
 }
 
 section header h1{
@@ -94,7 +101,7 @@ body {
 }
 
 .button:hover{
-    background-color: var(--brand-dark);
+    background-color: var(--primary-color-dark);
 }
 
 .wrapper {
@@ -103,13 +110,44 @@ body {
     padding-inline: 2.4rem;
 }
 
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+/*~~~~~~~~~~~~~~COLORS-CUSTOM~~~~~~~~~~~~~~~~*/
+#services .card circle {
+  fill: var(--primary-color-ligth);
+}
+
+#navigation .logo path[fill*='#00856F'],
+#backToTopButton circle {
+  fill: var(--primary-color);
+}
+
+button.open-menu path[stroke*='#00856F'],
+#contact li path {
+  stroke: var(--primary-color);
+}
+
+body.menu-expanded #navigation .logo path,
+#navigation.scroll .logo path {
+  fill: #fff;
+}
+
+#navigation.scroll button.open-menu path[stroke*='#00856F'] {
+  stroke: #fff;
+}
+
 /*~~~~~~~~~~~~~~HOME~~~~~~~~~~~~~~~~*/
 
 #home::before {
     content: '';
     width: 100%;
     height: calc(108rem + var(--nav-height));
-    background-color: var(--contour);
+    background-color: var(--primary-color-ligth);
     display: block;
     position: absolute;
     top: 0;
@@ -133,7 +171,7 @@ body {
     display: block;
     margin-inline: auto;
     object-position: 0 2rem;
-    width: 26.3rem;
+    width: 25.3rem;
     height: 34.2rem;
 }
 
@@ -151,7 +189,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 6rem;
-    border: 1px solid var(--contour);
+    border: 1px solid var(--primary-color-ligth);
     border-radius: 6px;
 }
 
@@ -185,14 +223,6 @@ nav .wrapper {
 
 nav.scroll {
     background-color: var(--primary-color);
-}
-
-nav.scroll svg:nth-child(1) path {
-    fill: #fff;
-}
-
-nav.scroll button path {
-    stroke: #fff;
 }
 
 nav button{
@@ -258,9 +288,15 @@ body.menu-expanded .menu {
     line-height: 2.3rem;
     text-transform: uppercase;
     text-decoration: none;
-    background: #FFFFFF;
+    background: #fff;
     border-radius: 4rem;
     margin: 4.8rem 0 8rem 0;
+}
+
+.menu .button:hover{
+    color: #fff;
+    background: var(--primary-color);
+    border: 1px solid #fff;
 }
 
 .menu ul li a {
@@ -268,17 +304,10 @@ body.menu-expanded .menu {
     text-decoration: none;
 }
 
-.social-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3.2rem;
-}
-
 body.menu-expanded .logo,
 body.menu-expanded button{
     position: relative;
-    z-index: 100;
+    z-index: 1000;
 }
 
 body.menu-expanded .logo path {
@@ -315,7 +344,7 @@ body.menu-expanded button path {
     text-align: left;
     background: #fff;
     border-radius: 0.6rem;
-    border: 1px solid var(--contour);
+    border: 1px solid var(--primary-color-ligth);
 }
 
 .card h3{
@@ -338,11 +367,6 @@ body.menu-expanded button path {
 }
 
 /*~~~~~~~~~~~~~~ABOUT~~~~~~~~~~~~~~~~*/
-#contact img{
-    width: 32.4rem;
-    height: 21.3rem;
-}
-
 #contact {
     text-align: left;
 }
@@ -396,4 +420,21 @@ footer p {
 
 footer .social-links{
     justify-content: flex-start;
+}
+
+/*~~~~~~~~~~~~~~BACKTOPBUTTON~~~~~~~~~~~~~~~~~~*/
+#backToTopButton{
+    position: fixed;
+    bottom: 1rem;
+    right: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: 200ms;
+}
+
+#backToTopButton.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
