@@ -27,21 +27,22 @@ Para se modificar um arquivo .html e .css, precisamos de editor de texto. Apesar
 - [Notepad++](https://notepad-plus-plus.org/);
 - [Atom](https://atom.io/);
 - Usado no Projeto: [Visual Studio Code](https://code.visualstudio.com/);
-
-<p align="center">
+<br>
+<h1> ScrollReveal </h1>
+<p align="left">
 	<a href="https://scrollrevealjs.org" title="Visit ScrollReveal home page">
 		<img src="https://scrollrevealjs.org/img/logomark.svg" alt="ScrollReveal" width="120">
 	</a>
 </p>
 <br>
-<p align="center">
+<p align="left">
 	<a href="https://scrollrevealjs.org" title="Visit ScrollReveal home page">
 		<img width="200" src="https://scrollrevealjs.org/img/scrollreveal-logotype-dark.svg" alt="ScrollReveal">
 	</a>
 </p>
-<p align="center">Animate elements as they scroll into view.</p>
+<p align="left">Animate elements as they scroll into view.</p>
 
-<p align="center">
+<p align="left">
 	<a href="https://travis-ci.org/jlmakes/scrollreveal">
 		<img src="https://img.shields.io/travis/jlmakes/scrollreveal.svg" alt="Build status">
 	</a>
