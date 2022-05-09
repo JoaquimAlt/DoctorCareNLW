@@ -119,19 +119,3 @@ ScrollReveal().reveal('.headline')
 **🔎 See this demo live on [JSBin](http://jsbin.com/jufohaxonu/edit?html,output)**
 
 <br>
-
----
-
-### The full documentation can be found at [https://scrollrevealjs.org](https://scrollrevealjs.org)
-
-> If you’re using an older version of ScrollReveal, you can find legacy documentation in the [wiki](https://github.com/jlmakes/scrollreveal/wiki)
-
----
-
-<br>
-
-<a href="https://scrollrevealjs.org/pricing/" title="Visit ScrollReveal pricing page">
-	<img align="right" height="300" src="https://scrollrevealjs.org/img/license.svg" alt="Commercial License Badge">
-</a>
-
-<br>
