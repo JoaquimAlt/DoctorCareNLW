@@ -6,6 +6,7 @@
 <img align="center" alt="css" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
 </div><br/>
 
+# Preview
 ### Com 3 adaptações de display temos:
 ## Smartphone/Tablet `320px-1023px` 
 <img height="320rem" src="https://user-images.githubusercontent.com/63430363/167310509-0ef6f0c7-7aa4-4c40-a251-743648038248.gif"> <br>
